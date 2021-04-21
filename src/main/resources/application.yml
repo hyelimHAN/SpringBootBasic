@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: dev
+  mvc:
+    locale: ko_KR
+---
+spring:
+  application:
+    name: Basic Server
+    version: 1.0
+  profiles:
+    active: dev
+  db1:
+    datasource:
+      hikari:
+        maximum-pool-size: 10
+        connection-test-query: SELECT 1
+        jdbc-url: jdbc:mysql://127.0.0.1:3306/test
+        username: root
+        password: 'intocns'
+        driver-class-name: com.mysql.cj.jdbc.Driver
+  logging:
+    config: classpath:logback-spring.xml
+    level:
+      com.intocns.Basic: DEBUG
+
+mybatis:
+  type-aliases-package: com.intocns.Basic
+  config-location: classpath:mybatis/mybatis-config.xml
+---

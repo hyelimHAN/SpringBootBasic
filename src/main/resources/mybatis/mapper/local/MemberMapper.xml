@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.intocns.Basic.mapper.local.MemberMapper">
+    <select id="selectAll" resultType="member">
+        SELECT * FROM data.account
+
+    </select>
+
+    <select id="selectMember" parameterType="int" resultType="member">
+        SELECT * FROM data.account
+        WHERE ID=#{user_id}
+    </select>
+</mapper>
