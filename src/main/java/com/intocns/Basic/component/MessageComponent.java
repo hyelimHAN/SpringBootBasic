@@ -26,6 +26,6 @@ public class MessageComponent {
     }
 
     public String getMessage(String code) {
-        return accessor.getMessage(code);
+        return accessor.getMessage(code, "");
     }
 }

@@ -1,6 +1,7 @@
 package com.intocns.Basic.service;
 
 import com.intocns.Basic.dao.local.MemberDao;
+import com.intocns.Basic.dto.request.member.AddMemberDto;
 import com.intocns.Basic.mapper.local.MemberMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,4 +20,6 @@ public class MemberService {
     public MemberDao selectUser(int user_id) {
         return memberMapper.selectMember(user_id);
     }
+
+    public int insertMember(MemberDao memberDao) { return memberMapper.insertMember(memberDao); }
 }

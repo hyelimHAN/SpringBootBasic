@@ -3,6 +3,9 @@ spring:
     active: dev
   mvc:
     locale: ko_KR
+  messages:
+    basename: classpath:messages/messages
+    encoding: UTF-8
 ---
 spring:
   application:

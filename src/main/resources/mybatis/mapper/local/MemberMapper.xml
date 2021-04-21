@@ -11,4 +11,9 @@
         SELECT * FROM data.account
         WHERE ID=#{user_id}
     </select>
+
+    <insert id="insertMember" parameterType="member">
+        INSERT INTO data.account (id, password, name )
+        VALUES ( #{id}, #{password}, #{name} )
+    </insert>
 </mapper>

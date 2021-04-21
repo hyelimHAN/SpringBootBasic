@@ -4,7 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="com.intocns.Basic.dao.local.HelloDao" alias="hello"/>
         <typeAlias type="com.intocns.Basic.dao.local.MemberDao" alias="member"/>
     </typeAliases>
 </configuration>
