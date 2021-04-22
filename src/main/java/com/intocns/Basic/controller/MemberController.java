@@ -31,23 +31,26 @@ public class MemberController {
     public ResponseEntity all(HttpServletRequest request) {
         List<MemberDao> members = memberService.selectAll();
         ResponseResultObject result = new ResponseResultObject(ResultConstants.CODE_SUCCESS,
-                messageComponent.getMessage("response.success"), members);
-        return ApiUtil.makeResponse(request, HttpStatus.OK, result);
+                messageComponent.getMessage("response.success"), members, request.getRequestURI());
+        return ApiUtil.makeResponse(result);
     }
 
     @RequestMapping("/{id}")
     public @ResponseBody Object get(HttpServletRequest request, @PathVariable("id") int id) {
-        MemberDao member = memberService.selectUser(id);
-        ResponseResultObject result = new ResponseResultObject();
-        result.setCode(ResultConstants.CODE_SUCCESS);
-        result.setMessage(messageComponent.getMessage("response.success"));
-        result.setData(member);
-        return ApiUtil.makeResponse(request, HttpStatus.OK, result);
+        try {
+            MemberDao member = memberService.selectUser(id);
+            ResponseResultObject result = new ResponseResultObject(
+                    ResultConstants.CODE_SUCCESS, messageComponent.getMessage("response.success"), member,
+                    request.getRequestURI());
+            return ApiUtil.makeResponse(result);
+        } catch (Exception e) {
+            log.warn("##### RequestURI : {} , Error Message : {}", request.getRequestURI(), e.getMessage());
+            return ApiUtil.makeHttpCodeResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
+        }
     }
 
     @RequestMapping(value = "/addMember", method = RequestMethod.POST)
     public ResponseEntity addMember(HttpServletRequest request, @RequestBody @Valid AddMemberDto addMemberDto) {
-        log.info(addMemberDto.toString());
         try {
             MemberDao memberDao = new MemberDao();
             memberDao.setId(addMemberDto.getId());
@@ -56,13 +59,11 @@ public class MemberController {
 
             memberService.insertMember(memberDao);
             ResponseResultObject result = new ResponseResultObject(ResultConstants.CODE_SUCCESS,
-                    messageComponent.getMessage("response.success"));
-            return ApiUtil.makeResponse(request, HttpStatus.OK, result);
+                    messageComponent.getMessage("response.success"), request.getRequestURI());
+            return ApiUtil.makeResponse(result);
         } catch (Exception e) {
-            log.warn(e.getMessage());
-            ResponseResultObject result = new ResponseResultObject(ResultConstants.CODE_FAIL,
-                    messageComponent.getMessage("response.fail"));
-            return ApiUtil.makeResponse(request, HttpStatus.INTERNAL_SERVER_ERROR, result);
+            log.warn("##### RequestURI : {} , Error Message : {}", request.getRequestURI(), e.getMessage());
+            return ApiUtil.makeHttpCodeResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
         }
     }
 

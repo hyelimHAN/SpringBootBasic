@@ -14,11 +14,29 @@ import java.util.Date;
 @Slf4j
 public class ApiUtil {
 
-    public static ResponseEntity makeResponse(HttpServletRequest request, HttpStatus httpStatus, ResponseResultObject ro) {
+    public static ResponseEntity makeResponse(ResponseResultObject ro) {
 
         ro.setTimeStamp(new Timestamp(new Date().getTime()));
-        ro.setPath(request.getRequestURI());
+        ro.setStatus(HttpStatus.OK.value());
+
+        return new ResponseEntity<>(ro, HttpStatus.OK);
+    }
+
+    public static ResponseEntity makeHttpCodeResponse(HttpStatus httpStatus) {
+        ResponseResultObject ro = new ResponseResultObject();
+
+        ro.setTimeStamp(new Timestamp(new Date().getTime()));
         ro.setStatus(httpStatus.value());
+
+        return new ResponseEntity<>(ro, httpStatus);
+    }
+
+    public static ResponseEntity makeHttpCodeResponse(HttpStatus httpStatus, String msg) {
+        ResponseResultObject ro = new ResponseResultObject();
+
+        ro.setTimeStamp(new Timestamp(new Date().getTime()));
+        ro.setStatus(httpStatus.value());
+        ro.setMessage(msg);
 
         return new ResponseEntity<>(ro, httpStatus);
     }
