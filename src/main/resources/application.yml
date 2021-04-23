@@ -24,6 +24,7 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
   logging:
     config: classpath:logback-spring.xml
+    # ERROR, WARN, INFO, DEBUG or TRACE
     level:
       com.intocns.Basic: DEBUG
 

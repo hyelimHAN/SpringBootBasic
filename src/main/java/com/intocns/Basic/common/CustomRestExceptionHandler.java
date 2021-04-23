@@ -51,6 +51,7 @@ public class CustomRestExceptionHandler extends ResponseEntityExceptionHandler {
 				ex.getLocalizedMessage(), ((ServletWebRequest) request).getRequest().getRequestURI() );
 	    apiError.setStatus(HttpStatus.BAD_REQUEST.value());
 	    apiError.setTimeStamp(new Timestamp(new Date().getTime()));
+	    // TODO : security 추가 후 로그 남기기
 	    // final String username = SecurityContextHolder.getContext().getAuthentication().getName();
 	    // log.error("coCode - " + username + " :: " + apiError.toString());
 	    
