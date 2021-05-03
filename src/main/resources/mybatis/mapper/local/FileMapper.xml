@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.intocns.Basic.mapper.local.MemberMapper">
+<mapper namespace="com.intocns.Basic.mapper.local.FileMapper">
     <select id="selectAll" resultType="member">
-        SELECT * FROM data.member
+        SELECT * FROM data.backup_files
 
     </select>
 
-    <select id="selectMember" parameterType="int" resultType="member">
+    <!--<select id="selectMember" parameterType="int" resultType="file">
         SELECT * FROM data.member
         WHERE ID=#{user_id}
     </select>
 
-    <insert id="insertMember" parameterType="member">
+    <insert id="insertMember" parameterType="file">
         INSERT INTO data.member (id, password, name )
         VALUES ( #{id}, #{password}, #{name} )
-    </insert>
+    </insert>-->
 </mapper>

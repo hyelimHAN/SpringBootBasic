@@ -5,9 +5,8 @@ import com.intocns.Basic.component.MessageComponent;
 import com.intocns.Basic.dao.local.MemberDao;
 import com.intocns.Basic.dto.request.member.AddMemberDto;
 import com.intocns.Basic.dto.response.ResponseResultObject;
-import com.intocns.Basic.service.MemberService;
+import com.intocns.Basic.mapper.local.MemberMapper;
 import com.intocns.Basic.util.ApiUtil;
-import com.sun.tools.javac.util.DefinedBy;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,13 +22,13 @@ import java.util.List;
 @RequestMapping("/member")
 public class MemberController {
     @Autowired
-    MemberService memberService;
+    private MemberMapper memberMapper;
     @Autowired
     MessageComponent messageComponent;
 
     @RequestMapping
     public ResponseEntity all(HttpServletRequest request) {
-        List<MemberDao> members = memberService.selectAll();
+        List<MemberDao> members = memberMapper.selectAll();
         ResponseResultObject result = new ResponseResultObject(ResultConstants.CODE_SUCCESS,
                 messageComponent.getMessage("response.success"), members, request.getRequestURI());
         return ApiUtil.makeResponse(result);
@@ -38,7 +37,7 @@ public class MemberController {
     @RequestMapping("/{id}")
     public @ResponseBody Object get(HttpServletRequest request, @PathVariable("id") int id) {
         try {
-            MemberDao member = memberService.selectUser(id);
+            MemberDao member = memberMapper.selectMember(id);
             ResponseResultObject result = new ResponseResultObject(
                     ResultConstants.CODE_SUCCESS, messageComponent.getMessage("response.success"), member,
                     request.getRequestURI());
@@ -57,7 +56,7 @@ public class MemberController {
             memberDao.setName(addMemberDto.getName());
             memberDao.setPassword(addMemberDto.getPassword());
 
-            memberService.insertMember(memberDao);
+            memberMapper.insertMember(memberDao);
             ResponseResultObject result = new ResponseResultObject(ResultConstants.CODE_SUCCESS,
                     messageComponent.getMessage("response.success"), request.getRequestURI());
             return ApiUtil.makeResponse(result);
