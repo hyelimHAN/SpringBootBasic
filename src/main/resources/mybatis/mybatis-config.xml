@@ -4,8 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="com.intocns.Basic.dao.local.MemberDao" alias="member"/>
-        <typeAlias type="com.intocns.Basic.dao.local.AuthDao" alias="auth"/>
-        <typeAlias type="com.intocns.Basic.dao.local.BackupFileDao" alias="file"/>
+        <typeAlias type="com.hlhan.Basic.dao.local.MemberDao" alias="member"/>
+        <typeAlias type="com.hlhan.Basic.dao.local.AuthDao" alias="auth"/>
+        <typeAlias type="com.hlhan.Basic.dao.local.BackupFileDao" alias="file"/>
     </typeAliases>
 </configuration>

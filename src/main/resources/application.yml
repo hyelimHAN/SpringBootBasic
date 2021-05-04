@@ -22,7 +22,7 @@ spring:
         connection-test-query: SELECT 1
         jdbc-url: jdbc:mysql://127.0.0.1:3306/test
         username: root
-        password: 'intocns'
+        password: 'hlhan'
         driver-class-name: com.mysql.cj.jdbc.Driver
   session:
     maxInactiveInterval: 6000  # 세션  테스트용
@@ -30,9 +30,9 @@ spring:
     config: classpath:logback-spring.xml
     # ERROR, WARN, INFO, DEBUG or TRACE
     level:
-      com.intocns.Basic: DEBUG
+      com.hlhan.Basic: DEBUG
 
 mybatis:
-  type-aliases-package: com.intocns.Basic
+  type-aliases-package: com.hlhan.Basic
   config-location: classpath:mybatis/mybatis-config.xml
 ---
