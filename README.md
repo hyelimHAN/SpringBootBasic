@@ -1,7 +1,8 @@
 # SpringBootBasic
-spring boot, mybatis, spring security 사용
+* spring boot, mybatis, spring security 사용
+* 기본적인 API 기능 구현
 
-### mariadb 정보
+## mariadb 정보
 * 버전 : 10.5.9
 * 도커 이미지 받아서 로컬에서 사용함
 * https://hub.docker.com/_/mariadb
