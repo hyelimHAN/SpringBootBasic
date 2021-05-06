@@ -1,0 +1,843 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SpringBootBasic",
+		"_postman_id": "391af694-184e-218b-4212-57cc2a8c30e1",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/auth/login",
+			"request": {
+				"url": "http://localhost:8080/auth/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"coCode\": \"1001\",\n\t\"password\": \"into7898!@#$\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "28d97879-dbd8-404b-85f8-a9d7f605c9fe",
+					"name": "http://localhost:8080/member/addMember",
+					"originalRequest": {
+						"url": "http://localhost:8080/member/addMember",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 22 Apr 2021 06:30:40 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "ir7mvje3uijkguhjnhmda1mhvmjk0h59",
+							"key": "ci_session"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "vurhbt5tfj7v2aabb5o16p7507",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node011bpthyinwile1vwkq2obd5djs0.node0",
+							"key": "JSESSIONID.21efe195"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node093yvs219v8fmd1udhxiajank0.node0",
+							"key": "JSESSIONID.816d01bc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node01dva88hbc0xkttdwdvdp7400.node0",
+							"key": "JSESSIONID.f1d95b98"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0gw2bbnyd99n01p82wiu27sjpm1.node0",
+							"key": "JSESSIONID.db04bc90"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "1920x1080",
+							"key": "screenResolution"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0fbgq9h61s0zo16sysfuawk4v40.node0",
+							"key": "JSESSIONID.b0928c9d"
+						},
+						{
+							"expires": "Fri Apr 23 2021 12:32:12 GMT+0900 (대한민국 표준시)",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "amVua2luczoxNjE5MTQ4NzMyNDQ0OjM3MzgwNmIyYTFlODBhNWNkYTQ1NjBkYjA5MDI5YTEyOGNjZDQxZTIzNWZmMWZkMTM2YzY2NDc0OWE4NTY1ODc",
+							"key": "remember-me"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node015pn3jd840ow033atzoszy1sf0.node0",
+							"key": "JSESSIONID.fa71d82d"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0870ncye5r23tcjys6i17v1075.node0",
+							"key": "JSESSIONID.23d9e6f5"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0rwlog0lhyyn0sdp1a0ukl5hm0.node0",
+							"key": "JSESSIONID.9d842475"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node01jvbuv5or27bw1fuz1z8i5gusr2.node0",
+							"key": "JSESSIONID.0487c0c6"
+						},
+						{
+							"expires": "Mon Aug 09 2021 07:51:46 GMT+0900 (대한민국 표준시)",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "32x32",
+							"key": "iconSize"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node012yp6rv4dtox61wnoqvl7hcmai0.node0",
+							"key": "JSESSIONID.80fcbc8e"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node01oyqyxurkoarl1cfgajbsod5sm1.node0",
+							"key": "JSESSIONID.12d77cec"
+						},
+						{
+							"expires": "Sat Apr 15 2023 14:41:00 GMT+0900 (대한민국 표준시)",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-32400000",
+							"key": "jenkins-timestamper-offset"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0tsdtozmv5untc5ug2t4tvtis79.node0",
+							"key": "JSESSIONID.45f7f1d0"
+						}
+					],
+					"responseTime": 443,
+					"body": "{\"timestamp\":\"2021-04-22T06:30:40.675+00:00\",\"status\":400,\"error\":\"Bad Request\",\"trace\":\"org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity com.intocns.Basic.controller.MemberController.addMember(javax.servlet.http.HttpServletRequest,com.intocns.Basic.dto.request.member.AddMemberDto): [Field error in object 'addMemberDto' on field 'id': rejected value [testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttest]; codes [Size.addMemberDto.id,Size.id,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addMemberDto.id,id]; arguments []; default message [id],10,3]; default message [입력가능한 값의 길이는 3 ~ 10 입니다.]] \\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:139)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:652)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:733)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)\\n\\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:834)\\n\",\"message\":\"Validation failed for object='addMemberDto'. Error count: 1\",\"errors\":[{\"codes\":[\"Size.addMemberDto.id\",\"Size.id\",\"Size.java.lang.String\",\"Size\"],\"arguments\":[{\"codes\":[\"addMemberDto.id\",\"id\"],\"arguments\":null,\"defaultMessage\":\"id\",\"code\":\"id\"},10,3],\"defaultMessage\":\"입력가능한 값의 길이는 3 ~ 10 입니다.\",\"objectName\":\"addMemberDto\",\"field\":\"id\",\"rejectedValue\":\"testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttest\",\"bindingFailure\":false,\"code\":\"Size\"}],\"path\":\"/member/addMember\"}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/auth/logout",
+			"request": {
+				"url": "http://localhost:8080/auth/logout",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"coCode\": \"1000\",\n\t\"password\": \"into7898!@#$\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "ea50d704-aec0-4bf5-a124-50196ebe9856",
+					"name": "http://localhost:8080/member/addMember",
+					"originalRequest": {
+						"url": "http://localhost:8080/member/addMember",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 22 Apr 2021 06:30:40 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "ir7mvje3uijkguhjnhmda1mhvmjk0h59",
+							"key": "ci_session"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "vurhbt5tfj7v2aabb5o16p7507",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node011bpthyinwile1vwkq2obd5djs0.node0",
+							"key": "JSESSIONID.21efe195"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node093yvs219v8fmd1udhxiajank0.node0",
+							"key": "JSESSIONID.816d01bc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node01dva88hbc0xkttdwdvdp7400.node0",
+							"key": "JSESSIONID.f1d95b98"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0gw2bbnyd99n01p82wiu27sjpm1.node0",
+							"key": "JSESSIONID.db04bc90"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "1920x1080",
+							"key": "screenResolution"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0fbgq9h61s0zo16sysfuawk4v40.node0",
+							"key": "JSESSIONID.b0928c9d"
+						},
+						{
+							"expires": "Fri Apr 23 2021 12:32:12 GMT+0900 (대한민국 표준시)",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "amVua2luczoxNjE5MTQ4NzMyNDQ0OjM3MzgwNmIyYTFlODBhNWNkYTQ1NjBkYjA5MDI5YTEyOGNjZDQxZTIzNWZmMWZkMTM2YzY2NDc0OWE4NTY1ODc",
+							"key": "remember-me"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node015pn3jd840ow033atzoszy1sf0.node0",
+							"key": "JSESSIONID.fa71d82d"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0870ncye5r23tcjys6i17v1075.node0",
+							"key": "JSESSIONID.23d9e6f5"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0rwlog0lhyyn0sdp1a0ukl5hm0.node0",
+							"key": "JSESSIONID.9d842475"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node01jvbuv5or27bw1fuz1z8i5gusr2.node0",
+							"key": "JSESSIONID.0487c0c6"
+						},
+						{
+							"expires": "Mon Aug 09 2021 07:51:46 GMT+0900 (대한민국 표준시)",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "32x32",
+							"key": "iconSize"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node012yp6rv4dtox61wnoqvl7hcmai0.node0",
+							"key": "JSESSIONID.80fcbc8e"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node01oyqyxurkoarl1cfgajbsod5sm1.node0",
+							"key": "JSESSIONID.12d77cec"
+						},
+						{
+							"expires": "Sat Apr 15 2023 14:41:00 GMT+0900 (대한민국 표준시)",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-32400000",
+							"key": "jenkins-timestamper-offset"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0tsdtozmv5untc5ug2t4tvtis79.node0",
+							"key": "JSESSIONID.45f7f1d0"
+						}
+					],
+					"responseTime": 443,
+					"body": "{\"timestamp\":\"2021-04-22T06:30:40.675+00:00\",\"status\":400,\"error\":\"Bad Request\",\"trace\":\"org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity com.intocns.Basic.controller.MemberController.addMember(javax.servlet.http.HttpServletRequest,com.intocns.Basic.dto.request.member.AddMemberDto): [Field error in object 'addMemberDto' on field 'id': rejected value [testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttest]; codes [Size.addMemberDto.id,Size.id,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addMemberDto.id,id]; arguments []; default message [id],10,3]; default message [입력가능한 값의 길이는 3 ~ 10 입니다.]] \\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:139)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:652)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:733)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)\\n\\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:834)\\n\",\"message\":\"Validation failed for object='addMemberDto'. Error count: 1\",\"errors\":[{\"codes\":[\"Size.addMemberDto.id\",\"Size.id\",\"Size.java.lang.String\",\"Size\"],\"arguments\":[{\"codes\":[\"addMemberDto.id\",\"id\"],\"arguments\":null,\"defaultMessage\":\"id\",\"code\":\"id\"},10,3],\"defaultMessage\":\"입력가능한 값의 길이는 3 ~ 10 입니다.\",\"objectName\":\"addMemberDto\",\"field\":\"id\",\"rejectedValue\":\"testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttest\",\"bindingFailure\":false,\"code\":\"Size\"}],\"path\":\"/member/addMember\"}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/member",
+			"request": {
+				"url": "http://localhost:8080/member",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/member/addMember",
+			"request": {
+				"url": "http://localhost:8080/member/addMember",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\" : \"dddd\",\n\t\"password\" : \"1\",\n\t\"name\" : \"김철수\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "71d48a0a-56df-4e61-b130-0acfd65927ea",
+					"name": "http://localhost:8080/member/addMember",
+					"originalRequest": {
+						"url": "http://localhost:8080/member/addMember",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "close",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Thu, 22 Apr 2021 06:30:40 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "ir7mvje3uijkguhjnhmda1mhvmjk0h59",
+							"key": "ci_session"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "vurhbt5tfj7v2aabb5o16p7507",
+							"key": "PHPSESSID"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node011bpthyinwile1vwkq2obd5djs0.node0",
+							"key": "JSESSIONID.21efe195"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node093yvs219v8fmd1udhxiajank0.node0",
+							"key": "JSESSIONID.816d01bc"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node01dva88hbc0xkttdwdvdp7400.node0",
+							"key": "JSESSIONID.f1d95b98"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0gw2bbnyd99n01p82wiu27sjpm1.node0",
+							"key": "JSESSIONID.db04bc90"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "1920x1080",
+							"key": "screenResolution"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0fbgq9h61s0zo16sysfuawk4v40.node0",
+							"key": "JSESSIONID.b0928c9d"
+						},
+						{
+							"expires": "Fri Apr 23 2021 12:32:12 GMT+0900 (대한민국 표준시)",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "amVua2luczoxNjE5MTQ4NzMyNDQ0OjM3MzgwNmIyYTFlODBhNWNkYTQ1NjBkYjA5MDI5YTEyOGNjZDQxZTIzNWZmMWZkMTM2YzY2NDc0OWE4NTY1ODc",
+							"key": "remember-me"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node015pn3jd840ow033atzoszy1sf0.node0",
+							"key": "JSESSIONID.fa71d82d"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0870ncye5r23tcjys6i17v1075.node0",
+							"key": "JSESSIONID.23d9e6f5"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0rwlog0lhyyn0sdp1a0ukl5hm0.node0",
+							"key": "JSESSIONID.9d842475"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node01jvbuv5or27bw1fuz1z8i5gusr2.node0",
+							"key": "JSESSIONID.0487c0c6"
+						},
+						{
+							"expires": "Mon Aug 09 2021 07:51:46 GMT+0900 (대한민국 표준시)",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "32x32",
+							"key": "iconSize"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node012yp6rv4dtox61wnoqvl7hcmai0.node0",
+							"key": "JSESSIONID.80fcbc8e"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node01oyqyxurkoarl1cfgajbsod5sm1.node0",
+							"key": "JSESSIONID.12d77cec"
+						},
+						{
+							"expires": "Sat Apr 15 2023 14:41:00 GMT+0900 (대한민국 표준시)",
+							"hostOnly": true,
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": false,
+							"value": "-32400000",
+							"key": "jenkins-timestamper-offset"
+						},
+						{
+							"expires": "Invalid Date",
+							"hostOnly": true,
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"session": true,
+							"value": "node0tsdtozmv5untc5ug2t4tvtis79.node0",
+							"key": "JSESSIONID.45f7f1d0"
+						}
+					],
+					"responseTime": 443,
+					"body": "{\"timestamp\":\"2021-04-22T06:30:40.675+00:00\",\"status\":400,\"error\":\"Bad Request\",\"trace\":\"org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity com.intocns.Basic.controller.MemberController.addMember(javax.servlet.http.HttpServletRequest,com.intocns.Basic.dto.request.member.AddMemberDto): [Field error in object 'addMemberDto' on field 'id': rejected value [testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttest]; codes [Size.addMemberDto.id,Size.id,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [addMemberDto.id,id]; arguments []; default message [id],10,3]; default message [입력가능한 값의 길이는 3 ~ 10 입니다.]] \\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:139)\\n\\tat org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:121)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167)\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:652)\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:733)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)\\n\\tat java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.base/java.lang.Thread.run(Thread.java:834)\\n\",\"message\":\"Validation failed for object='addMemberDto'. Error count: 1\",\"errors\":[{\"codes\":[\"Size.addMemberDto.id\",\"Size.id\",\"Size.java.lang.String\",\"Size\"],\"arguments\":[{\"codes\":[\"addMemberDto.id\",\"id\"],\"arguments\":null,\"defaultMessage\":\"id\",\"code\":\"id\"},10,3],\"defaultMessage\":\"입력가능한 값의 길이는 3 ~ 10 입니다.\",\"objectName\":\"addMemberDto\",\"field\":\"id\",\"rejectedValue\":\"testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttest\",\"bindingFailure\":false,\"code\":\"Size\"}],\"path\":\"/member/addMember\"}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/file",
+			"request": {
+				"url": "http://localhost:8080/file",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
