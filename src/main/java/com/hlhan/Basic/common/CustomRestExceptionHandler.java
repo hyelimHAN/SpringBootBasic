@@ -1,6 +1,6 @@
 package com.hlhan.Basic.common;
 
-import com.hlhan.Basic.Constants.ResultConstants;
+import com.hlhan.Basic.constants.ResultConstants;
 import com.hlhan.Basic.component.MessageComponent;
 import com.hlhan.Basic.dto.response.ResponseResultObject;
 import lombok.extern.slf4j.Slf4j;

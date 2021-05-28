@@ -1,6 +1,6 @@
 package com.hlhan.Basic.controller;
 
-import com.hlhan.Basic.Constants.ResultConstants;
+import com.hlhan.Basic.constants.ResultConstants;
 import com.hlhan.Basic.component.MessageComponent;
 import com.hlhan.Basic.dto.request.member.AddMemberDto;
 import com.hlhan.Basic.mapper.local.MemberMapper;
@@ -29,19 +29,16 @@ public class MemberController {
     @RequestMapping
     public ResponseEntity all(HttpServletRequest request) {
         List<MemberDao> members = memberMapper.selectAll();
-        ResponseResultObject result = new ResponseResultObject(ResultConstants.CODE_SUCCESS,
-                messageComponent.getMessage("response.success"), members, request.getRequestURI());
-        return ApiUtil.makeResponse(result);
+        return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS,
+                messageComponent.getMessage("response.success"), members, request);
     }
 
     @RequestMapping("/{id}")
     public @ResponseBody Object get(HttpServletRequest request, @PathVariable("id") int id) {
         try {
             MemberDao member = memberMapper.selectMember(id);
-            ResponseResultObject result = new ResponseResultObject(
-                    ResultConstants.CODE_SUCCESS, messageComponent.getMessage("response.success"), member,
-                    request.getRequestURI());
-            return ApiUtil.makeResponse(result);
+            return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS, messageComponent.getMessage("response.success"), member,
+                    request);
         } catch (Exception e) {
             log.warn("##### RequestURI : {} , Error Message : {}", request.getRequestURI(), e.getMessage());
             return ApiUtil.makeHttpCodeResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
@@ -57,9 +54,8 @@ public class MemberController {
             memberDao.setPassword(addMemberDto.getPassword());
 
             memberMapper.insertMember(memberDao);
-            ResponseResultObject result = new ResponseResultObject(ResultConstants.CODE_SUCCESS,
-                    messageComponent.getMessage("response.success"), request.getRequestURI());
-            return ApiUtil.makeResponse(result);
+            return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS,
+                    messageComponent.getMessage("response.success"), request);
         } catch (Exception e) {
             log.warn("##### RequestURI : {} , Error Message : {}", request.getRequestURI(), e.getMessage());
             return ApiUtil.makeHttpCodeResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());

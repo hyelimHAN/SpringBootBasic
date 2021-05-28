@@ -1,4 +1,4 @@
-package com.hlhan.Basic.Constants;
+package com.hlhan.Basic.constants;
 
 public class ResultConstants {
 

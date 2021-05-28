@@ -1,6 +1,6 @@
 package com.hlhan.Basic.controller;
 
-import com.hlhan.Basic.Constants.ResultConstants;
+import com.hlhan.Basic.constants.ResultConstants;
 import com.hlhan.Basic.component.MessageComponent;
 import com.hlhan.Basic.dao.local.BackupFileDao;
 import com.hlhan.Basic.dto.response.ResponseResultObject;
@@ -28,8 +28,7 @@ public class FileController {
     @RequestMapping
     public ResponseEntity all(HttpServletRequest request) {
         List<BackupFileDao> files = fileMapper.selectAll();
-        ResponseResultObject result = new ResponseResultObject(ResultConstants.CODE_SUCCESS,
-                messageComponent.getMessage("response.success"), files, request.getRequestURI());
-        return ApiUtil.makeResponse(result);
+        return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS,
+                messageComponent.getMessage("response.success"), files, request);
     }
 }

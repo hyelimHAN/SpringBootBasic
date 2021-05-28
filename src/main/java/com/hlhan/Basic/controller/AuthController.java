@@ -1,6 +1,6 @@
 package com.hlhan.Basic.controller;
 
-import com.hlhan.Basic.Constants.ResultConstants;
+import com.hlhan.Basic.constants.ResultConstants;
 import com.hlhan.Basic.component.MessageComponent;
 import com.hlhan.Basic.dto.request.member.LoginDto;
 import com.hlhan.Basic.dto.response.ResponseResultObject;
@@ -58,9 +58,8 @@ public class AuthController {
 
             session.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
 
-            ResponseResultObject ro = new ResponseResultObject(ResultConstants.CODE_SUCCESS,
-                    messageComponent.getMessage("response.success"), request.getRequestURI());
-            return ApiUtil.makeResponse(ro);
+            return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS,
+                    messageComponent.getMessage("response.success"), request);
         }
         catch (Exception e) {
             ApiUtil.writeExcetpionLog(e);
