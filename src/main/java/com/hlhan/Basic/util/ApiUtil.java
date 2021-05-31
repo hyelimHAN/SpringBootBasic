@@ -1,7 +1,9 @@
 package com.hlhan.Basic.util;
 
+import com.hlhan.Basic.component.MessageComponent;
 import com.hlhan.Basic.dto.response.ResponseResultObject;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,10 +17,13 @@ import java.util.Date;
 @Slf4j
 public class ApiUtil {
 
-    public static ResponseEntity makeResponse(String responseCode, String responseMsg, HttpServletRequest request) {
+    @Autowired
+    private static MessageComponent messageComponent;
+
+    public static ResponseEntity makeResponse(String responseCode, HttpServletRequest request) {
         ResponseResultObject ro = new ResponseResultObject();
         ro.setCode(responseCode);
-        ro.setMessage(responseMsg);
+        ro.setMessage(messageComponent.getMessage(responseCode));
         ro.setPath(request.getRequestURI());
         ro.setTimeStamp(new Timestamp(new Date().getTime()));
         ro.setStatus(HttpStatus.OK.value());
@@ -26,10 +31,10 @@ public class ApiUtil {
         return new ResponseEntity<>(ro, HttpStatus.OK);
     }
 
-    public static ResponseEntity makeResponse(String responseCode, String responseMsg, Object responseData, HttpServletRequest request) {
+    public static ResponseEntity makeResponse(String responseCode, Object responseData, HttpServletRequest request) {
         ResponseResultObject ro = new ResponseResultObject();
         ro.setCode(responseCode);
-        ro.setMessage(responseMsg);
+        ro.setMessage(messageComponent.getMessage(responseCode));
         ro.setData(responseData);
         ro.setPath(request.getRequestURI());
         ro.setTimeStamp(new Timestamp(new Date().getTime()));

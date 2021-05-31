@@ -35,9 +35,6 @@ public class AuthController {
     @Autowired
     AuthenticationManager authenticationManager;
 
-    @Autowired
-    MessageComponent messageComponent;
-
     @RequestMapping("/logout")
     public void logout(HttpSession session) {
         session.invalidate();
@@ -58,8 +55,7 @@ public class AuthController {
 
             session.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
 
-            return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS,
-                    messageComponent.getMessage("response.success"), request);
+            return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS, request);
         }
         catch (Exception e) {
             ApiUtil.writeExcetpionLog(e);

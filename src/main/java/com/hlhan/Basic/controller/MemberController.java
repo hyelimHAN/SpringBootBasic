@@ -23,22 +23,18 @@ import java.util.List;
 public class MemberController {
     @Autowired
     private MemberMapper memberMapper;
-    @Autowired
-    MessageComponent messageComponent;
 
     @RequestMapping
     public ResponseEntity all(HttpServletRequest request) {
         List<MemberDao> members = memberMapper.selectAll();
-        return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS,
-                messageComponent.getMessage("response.success"), members, request);
+        return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS, members, request);
     }
 
     @RequestMapping("/{id}")
     public @ResponseBody Object get(HttpServletRequest request, @PathVariable("id") int id) {
         try {
             MemberDao member = memberMapper.selectMember(id);
-            return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS, messageComponent.getMessage("response.success"), member,
-                    request);
+            return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS, member, request);
         } catch (Exception e) {
             log.warn("##### RequestURI : {} , Error Message : {}", request.getRequestURI(), e.getMessage());
             return ApiUtil.makeHttpCodeResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
@@ -54,8 +50,7 @@ public class MemberController {
             memberDao.setPassword(addMemberDto.getPassword());
 
             memberMapper.insertMember(memberDao);
-            return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS,
-                    messageComponent.getMessage("response.success"), request);
+            return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS, request);
         } catch (Exception e) {
             log.warn("##### RequestURI : {} , Error Message : {}", request.getRequestURI(), e.getMessage());
             return ApiUtil.makeHttpCodeResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());

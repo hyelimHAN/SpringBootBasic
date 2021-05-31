@@ -22,13 +22,9 @@ public class FileController {
     @Autowired
     private FileMapper fileMapper;
 
-    @Autowired
-    MessageComponent messageComponent;
-
     @RequestMapping
     public ResponseEntity all(HttpServletRequest request) {
         List<BackupFileDao> files = fileMapper.selectAll();
-        return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS,
-                messageComponent.getMessage("response.success"), files, request);
+        return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS, files, request);
     }
 }
