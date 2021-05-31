@@ -1,10 +1,7 @@
 package com.hlhan.Basic.controller;
 
 import com.hlhan.Basic.constants.ResultConstants;
-import com.hlhan.Basic.component.MessageComponent;
 import com.hlhan.Basic.dto.request.member.LoginDto;
-import com.hlhan.Basic.dto.response.ResponseResultObject;
-import com.hlhan.Basic.util.ApiUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -28,7 +25,7 @@ import javax.validation.Valid;
 @RestController
 @Slf4j
 @RequestMapping("/auth")
-public class AuthController {
+public class AuthController extends BaseController {
     @Value("${spring.session.maxInactiveInterval}")
     private int maxInactiveInterval;
 
@@ -55,11 +52,11 @@ public class AuthController {
 
             session.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY, SecurityContextHolder.getContext());
 
-            return ApiUtil.makeResponse(ResultConstants.CODE_SUCCESS, request);
+            return super.makeResponse(ResultConstants.CODE_SUCCESS, request);
         }
         catch (Exception e) {
-            ApiUtil.writeExcetpionLog(e);
-            return ApiUtil.makeHttpCodeResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.toString());
+            super.writeExcetpionLog(e);
+            return super.makeHttpCodeResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.toString());
         }
     }
 }

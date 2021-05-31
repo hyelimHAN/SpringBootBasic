@@ -1,4 +1,4 @@
-package com.hlhan.Basic.util;
+package com.hlhan.Basic.controller;
 
 import com.hlhan.Basic.component.MessageComponent;
 import com.hlhan.Basic.dto.response.ResponseResultObject;
@@ -15,12 +15,12 @@ import java.sql.Timestamp;
 import java.util.Date;
 
 @Slf4j
-public class ApiUtil {
+public class BaseController {
 
     @Autowired
-    private static MessageComponent messageComponent;
+    protected MessageComponent messageComponent;
 
-    public static ResponseEntity makeResponse(String responseCode, HttpServletRequest request) {
+    protected ResponseEntity makeResponse(String responseCode, HttpServletRequest request) {
         ResponseResultObject ro = new ResponseResultObject();
         ro.setCode(responseCode);
         ro.setMessage(messageComponent.getMessage(responseCode));
@@ -31,7 +31,7 @@ public class ApiUtil {
         return new ResponseEntity<>(ro, HttpStatus.OK);
     }
 
-    public static ResponseEntity makeResponse(String responseCode, Object responseData, HttpServletRequest request) {
+    protected ResponseEntity makeResponse(String responseCode, Object responseData, HttpServletRequest request) {
         ResponseResultObject ro = new ResponseResultObject();
         ro.setCode(responseCode);
         ro.setMessage(messageComponent.getMessage(responseCode));
@@ -43,7 +43,7 @@ public class ApiUtil {
         return new ResponseEntity<>(ro, HttpStatus.OK);
     }
 
-    public static ResponseEntity makeHttpCodeResponse(HttpStatus httpStatus) {
+    protected ResponseEntity makeHttpCodeResponse(HttpStatus httpStatus) {
         ResponseResultObject ro = new ResponseResultObject();
 
         ro.setTimeStamp(new Timestamp(new Date().getTime()));
@@ -52,7 +52,7 @@ public class ApiUtil {
         return new ResponseEntity<>(ro, httpStatus);
     }
 
-    public static ResponseEntity makeHttpCodeResponse(HttpStatus httpStatus, String msg) {
+    protected ResponseEntity makeHttpCodeResponse(HttpStatus httpStatus, String msg) {
         ResponseResultObject ro = new ResponseResultObject();
 
         ro.setTimeStamp(new Timestamp(new Date().getTime()));
@@ -62,12 +62,12 @@ public class ApiUtil {
         return new ResponseEntity<>(ro, httpStatus);
     }
 
-    public static void writeErrorLog(String err) {
+    protected void writeErrorLog(String err) {
         final String username = SecurityContextHolder.getContext().getAuthentication().getName();
         log.error("coCode - {} :: {}", username,  err);
     }
 
-    public static void writeExcetpionLog(Exception e) {
+    protected void writeExcetpionLog(Exception e) {
         final String username = SecurityContextHolder.getContext().getAuthentication().getName();
 
         StringWriter writer = new StringWriter();
