@@ -8,6 +8,8 @@ spring:
     encoding: UTF-8
   session:
     maxInactiveInterval: 60
+  jackson:
+    property-naming-strategy: SNAKE_CASE
 ---
 spring:
   application:
